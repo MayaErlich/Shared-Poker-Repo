@@ -210,8 +210,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.TexasHoldEmPanel);
             this.Controls.Add(this.PokerPanel);
+            this.Controls.Add(this.TexasHoldEmPanel);
             this.Name = "MainForm";
             this.Text = "Poker";
             this.Load += new System.EventHandler(this.MainForm_Load);
