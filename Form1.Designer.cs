@@ -1,6 +1,6 @@
 ﻿namespace Shared_Poker_Repo
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,152 +28,220 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.PokerPanel = new System.Windows.Forms.Panel();
+            this.PokerImage = new System.Windows.Forms.PictureBox();
+            this.TableTopButton = new System.Windows.Forms.Button();
+            this.BlackJackButton = new System.Windows.Forms.Button();
+            this.FiveCardDrawButton = new System.Windows.Forms.Button();
+            this.TexasHoldEmButton = new System.Windows.Forms.Button();
+            this.PokerTitle = new System.Windows.Forms.Label();
+            this.TexasHoldEmPanel = new System.Windows.Forms.Panel();
+            this.NumGamesLable = new System.Windows.Forms.Label();
+            this.NumPlayersLabel = new System.Windows.Forms.Label();
+            this.NumGamesSlider = new System.Windows.Forms.TrackBar();
+            this.NumPlayersSlider = new System.Windows.Forms.TrackBar();
+            this.TexasHoldEmBackButton = new System.Windows.Forms.Button();
+            this.TexasHoldEmTitle = new System.Windows.Forms.Label();
+            this.PokerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PokerImage)).BeginInit();
+            this.TexasHoldEmPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumGamesSlider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPlayersSlider)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // PokerPanel
             // 
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 681);
-            this.panel1.TabIndex = 0;
+            this.PokerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PokerPanel.Controls.Add(this.PokerImage);
+            this.PokerPanel.Controls.Add(this.TableTopButton);
+            this.PokerPanel.Controls.Add(this.BlackJackButton);
+            this.PokerPanel.Controls.Add(this.FiveCardDrawButton);
+            this.PokerPanel.Controls.Add(this.TexasHoldEmButton);
+            this.PokerPanel.Controls.Add(this.PokerTitle);
+            this.PokerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PokerPanel.Location = new System.Drawing.Point(0, 0);
+            this.PokerPanel.Name = "PokerPanel";
+            this.PokerPanel.Size = new System.Drawing.Size(1264, 681);
+            this.PokerPanel.TabIndex = 0;
             // 
-            // pictureBox1
+            // PokerImage
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(741, 175);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(511, 389);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PokerImage.Image = ((System.Drawing.Image)(resources.GetObject("PokerImage.Image")));
+            this.PokerImage.Location = new System.Drawing.Point(741, 175);
+            this.PokerImage.Name = "PokerImage";
+            this.PokerImage.Size = new System.Drawing.Size(511, 389);
+            this.PokerImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PokerImage.TabIndex = 5;
+            this.PokerImage.TabStop = false;
             // 
-            // button4
+            // TableTopButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.button4.Location = new System.Drawing.Point(373, 307);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(355, 126);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "TableTop";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.TableTopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.TableTopButton.Location = new System.Drawing.Point(373, 307);
+            this.TableTopButton.Name = "TableTopButton";
+            this.TableTopButton.Size = new System.Drawing.Size(355, 126);
+            this.TableTopButton.TabIndex = 4;
+            this.TableTopButton.Text = "TableTop";
+            this.TableTopButton.UseVisualStyleBackColor = true;
+            this.TableTopButton.Click += new System.EventHandler(this.TableTopButton_Click);
             // 
-            // button3
+            // BlackJackButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.button3.Location = new System.Drawing.Point(12, 307);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(355, 126);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "BlackJack";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BlackJackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.BlackJackButton.Location = new System.Drawing.Point(12, 307);
+            this.BlackJackButton.Name = "BlackJackButton";
+            this.BlackJackButton.Size = new System.Drawing.Size(355, 126);
+            this.BlackJackButton.TabIndex = 3;
+            this.BlackJackButton.Text = "BlackJack";
+            this.BlackJackButton.UseVisualStyleBackColor = true;
+            this.BlackJackButton.Click += new System.EventHandler(this.BlackJackButton_Click);
             // 
-            // button2
+            // FiveCardDrawButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.button2.Location = new System.Drawing.Point(373, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 126);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "5 Card Draw";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.FiveCardDrawButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.FiveCardDrawButton.Location = new System.Drawing.Point(373, 175);
+            this.FiveCardDrawButton.Name = "FiveCardDrawButton";
+            this.FiveCardDrawButton.Size = new System.Drawing.Size(355, 126);
+            this.FiveCardDrawButton.TabIndex = 2;
+            this.FiveCardDrawButton.Text = "5 Card Draw";
+            this.FiveCardDrawButton.UseVisualStyleBackColor = true;
+            this.FiveCardDrawButton.Click += new System.EventHandler(this.FiveCardDrawButton_Click);
             // 
-            // button1
+            // TexasHoldEmButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.button1.Location = new System.Drawing.Point(12, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(355, 126);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Texas Hold\'Em";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.TexasHoldEmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.TexasHoldEmButton.Location = new System.Drawing.Point(12, 175);
+            this.TexasHoldEmButton.Name = "TexasHoldEmButton";
+            this.TexasHoldEmButton.Size = new System.Drawing.Size(355, 126);
+            this.TexasHoldEmButton.TabIndex = 1;
+            this.TexasHoldEmButton.Text = "Texas Hold\'Em";
+            this.TexasHoldEmButton.UseVisualStyleBackColor = true;
+            this.TexasHoldEmButton.Click += new System.EventHandler(this.TexasHoldEmButton_Click);
             // 
-            // label1
+            // PokerTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F);
-            this.label1.Location = new System.Drawing.Point(300, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(495, 181);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Poker";
+            this.PokerTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PokerTitle.AutoSize = true;
+            this.PokerTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F);
+            this.PokerTitle.Location = new System.Drawing.Point(300, 0);
+            this.PokerTitle.Name = "PokerTitle";
+            this.PokerTitle.Size = new System.Drawing.Size(495, 181);
+            this.PokerTitle.TabIndex = 0;
+            this.PokerTitle.Text = "Poker";
             // 
-            // panel2
+            // TexasHoldEmPanel
             // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1264, 681);
-            this.panel2.TabIndex = 6;
+            this.TexasHoldEmPanel.Controls.Add(this.NumGamesLable);
+            this.TexasHoldEmPanel.Controls.Add(this.NumPlayersLabel);
+            this.TexasHoldEmPanel.Controls.Add(this.NumGamesSlider);
+            this.TexasHoldEmPanel.Controls.Add(this.NumPlayersSlider);
+            this.TexasHoldEmPanel.Controls.Add(this.TexasHoldEmBackButton);
+            this.TexasHoldEmPanel.Controls.Add(this.TexasHoldEmTitle);
+            this.TexasHoldEmPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TexasHoldEmPanel.Location = new System.Drawing.Point(0, 0);
+            this.TexasHoldEmPanel.Name = "TexasHoldEmPanel";
+            this.TexasHoldEmPanel.Size = new System.Drawing.Size(1264, 681);
+            this.TexasHoldEmPanel.TabIndex = 6;
             // 
-            // button5
+            // NumGamesLable
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 37);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Back";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.NumGamesLable.AutoSize = true;
+            this.NumGamesLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.NumGamesLable.Location = new System.Drawing.Point(374, 150);
+            this.NumGamesLable.Name = "NumGamesLable";
+            this.NumGamesLable.Size = new System.Drawing.Size(234, 31);
+            this.NumGamesLable.TabIndex = 5;
+            this.NumGamesLable.Text = "Number of Games";
             // 
-            // Form1
+            // NumPlayersLabel
+            // 
+            this.NumPlayersLabel.AutoSize = true;
+            this.NumPlayersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.NumPlayersLabel.Location = new System.Drawing.Point(12, 150);
+            this.NumPlayersLabel.Name = "NumPlayersLabel";
+            this.NumPlayersLabel.Size = new System.Drawing.Size(238, 31);
+            this.NumPlayersLabel.TabIndex = 4;
+            this.NumPlayersLabel.Text = "Number of Players";
+            // 
+            // NumGamesSlider
+            // 
+            this.NumGamesSlider.Location = new System.Drawing.Point(380, 190);
+            this.NumGamesSlider.Maximum = 20;
+            this.NumGamesSlider.Name = "NumGamesSlider";
+            this.NumGamesSlider.Size = new System.Drawing.Size(355, 45);
+            this.NumGamesSlider.TabIndex = 3;
+            this.NumGamesSlider.Scroll += new System.EventHandler(this.NumGamesSlider_Scroll);
+            // 
+            // NumPlayersSlider
+            // 
+            this.NumPlayersSlider.Location = new System.Drawing.Point(12, 190);
+            this.NumPlayersSlider.Maximum = 20;
+            this.NumPlayersSlider.Name = "NumPlayersSlider";
+            this.NumPlayersSlider.Size = new System.Drawing.Size(355, 45);
+            this.NumPlayersSlider.TabIndex = 2;
+            this.NumPlayersSlider.Scroll += new System.EventHandler(this.NumPlayersSlider_Scroll);
+            // 
+            // TexasHoldEmBackButton
+            // 
+            this.TexasHoldEmBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.TexasHoldEmBackButton.Location = new System.Drawing.Point(0, 0);
+            this.TexasHoldEmBackButton.Name = "TexasHoldEmBackButton";
+            this.TexasHoldEmBackButton.Size = new System.Drawing.Size(88, 37);
+            this.TexasHoldEmBackButton.TabIndex = 0;
+            this.TexasHoldEmBackButton.Text = "Back";
+            this.TexasHoldEmBackButton.UseVisualStyleBackColor = true;
+            this.TexasHoldEmBackButton.Click += new System.EventHandler(this.TexasHoldEmBackButton_Click);
+            // 
+            // TexasHoldEmTitle
+            // 
+            this.TexasHoldEmTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TexasHoldEmTitle.AutoSize = true;
+            this.TexasHoldEmTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
+            this.TexasHoldEmTitle.Location = new System.Drawing.Point(225, 0);
+            this.TexasHoldEmTitle.Name = "TexasHoldEmTitle";
+            this.TexasHoldEmTitle.Size = new System.Drawing.Size(772, 120);
+            this.TexasHoldEmTitle.TabIndex = 1;
+            this.TexasHoldEmTitle.Text = "Texas Hold\'Em";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.Name = "Form1";
+            this.Controls.Add(this.TexasHoldEmPanel);
+            this.Controls.Add(this.PokerPanel);
+            this.Name = "MainForm";
             this.Text = "Poker";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.PokerPanel.ResumeLayout(false);
+            this.PokerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PokerImage)).EndInit();
+            this.TexasHoldEmPanel.ResumeLayout(false);
+            this.TexasHoldEmPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumGamesSlider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumPlayersSlider)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel PokerPanel;
+        private System.Windows.Forms.Button TableTopButton;
+        private System.Windows.Forms.Button BlackJackButton;
+        private System.Windows.Forms.Button FiveCardDrawButton;
+        private System.Windows.Forms.Button TexasHoldEmButton;
+        private System.Windows.Forms.Label PokerTitle;
+        private System.Windows.Forms.PictureBox PokerImage;
+        private System.Windows.Forms.Panel TexasHoldEmPanel;
+        private System.Windows.Forms.Button TexasHoldEmBackButton;
+        private System.Windows.Forms.Label TexasHoldEmTitle;
+        private System.Windows.Forms.TrackBar NumPlayersSlider;
+        private System.Windows.Forms.Label NumGamesLable;
+        private System.Windows.Forms.Label NumPlayersLabel;
+        private System.Windows.Forms.TrackBar NumGamesSlider;
     }
 }
 

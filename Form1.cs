@@ -10,61 +10,73 @@ using System.Windows.Forms;
 
 namespace Shared_Poker_Repo
 {
-    public partial class Form1 : Form
+    ///Main form where where everything is located
+    ///Components are put inside panels
+    ///panel is a seperate page
+    ///Current Panels:(Update when more are added)
+    ///    Main Page Panel     <see cref="MainForm.PokerPanel"/>
+    ///    Texas Hold'Em Panel <see cref="MainForm.TexasHoldEmPanel"/>
+    ///Panels to be added:(crefs not working)
+    ///    5 Card Draw Panel   <see cref="MainForm.FiveCardDrawPanel"/>
+    ///    BlackJack Panel     <see cref="MainForm.BlackJack"/>
+    ///    TableTop Panel      <see cref="MainForm.TableTop"/>
+
+    public partial class MainForm : Form
     {
         List<Panel> listPanel = new List<Panel>();
-        int Index;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        ///Loads the main form <see cref="MainForm.InitializeComponent"/> MainForm section
+        //DO NOT change the order that panels are added, will make the PokerPanel buttons useless
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            listPanel.Add(panel1);
-            listPanel.Add(panel2);
-        }
-            private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            listPanel.Add(PokerPanel);
+            listPanel.Add(TexasHoldEmPanel);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Handles the switching of panels done on PokerPanel
+        #region PokerPanel Button EventHandlers
+        private void TexasHoldEmButton_Click(object sender, EventArgs e)
         {
-            switchPanel();
+            listPanel[1].BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void FiveCardDrawButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BlackJackButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void TableTopButton_Click(object sender, EventArgs e)
         {
-            switchPanel();
+
+        }
+        #endregion
+
+        //Handles the events of all TexasHoldEmPanel components
+        #region TexasHoldEmPanel Component EventHandlers 
+        //Potentially change this to be the event handler for all panels branched from PokerPanel
+        private void TexasHoldEmBackButton_Click(object sender, EventArgs e)
+        {
+            listPanel[0].BringToFront();
         }
 
-        private void switchPanel()
+        private void NumPlayersSlider_Scroll(object sender, EventArgs e)
         {
-            if (Index < listPanel.Count - 1)
-            {
-                Index++; 
-            }
-            else if (Index > 0)
-            {
-                Index--;
-            }
-            listPanel[Index].BringToFront();
+
         }
+
+        private void NumGamesSlider_Scroll(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
