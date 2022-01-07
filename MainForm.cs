@@ -33,15 +33,22 @@ namespace Shared_Poker_Repo
         //DO NOT change the order that panels are added, will make the PokerPanel buttons useless
         private void MainForm_Load(object sender, EventArgs e)
         {
-            listPanel.Add(PokerPanel);
+            listPanel.Add(MainPanel);
             listPanel.Add(TexasHoldEmPanel);
         }
 
+        //universally used method to move back
+        private void ShiftBack(object sender, EventArgs e)
+        {
+            listPanel[0].BringToFront();
+            this.Text = ((Button)sender).Parent.ToString();
+        }
         //Handles the switching of panels done on PokerPanel
         #region PokerPanel Button EventHandlers
         private void TexasHoldEmButton_Click(object sender, EventArgs e)
         {
             listPanel[1].BringToFront();
+            this.Text = ((Button)sender).Parent.ToString();
         }
 
         private void FiveCardDrawButton_Click(object sender, EventArgs e)
@@ -60,14 +67,9 @@ namespace Shared_Poker_Repo
         }
         #endregion
 
-        //Handles the events of all TexasHoldEmPanel components
+        //Handles the events of TexasHoldEmPanel components
         #region TexasHoldEmPanel Component EventHandlers 
         //Potentially change this to be the event handler for all panels branched from PokerPanel
-        private void TexasHoldEmBackButton_Click(object sender, EventArgs e)
-        {
-            listPanel[0].BringToFront();
-        }
-
         private void NumPlayersSlider_Scroll(object sender, EventArgs e)
         {
 
