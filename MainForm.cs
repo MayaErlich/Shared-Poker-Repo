@@ -69,13 +69,31 @@ namespace Shared_Poker_Repo
         //Potentially change this to be the event handler for all panels branched from PokerPanel
         private void NumPlayersSlider_Scroll(object sender, EventArgs e)
         {
-
+            NumPlayersLabel.Text = $"Number of Players: {NumPlayersSlider.Value}";
         }
 
         private void NumGamesSlider_Scroll(object sender, EventArgs e)
         {
+            NumGamesLabel.Text = $"Number of Games: {NumGamesSlider.Value}";
+        }
 
+        private void NumChipsSlider_Scroll(object sender, EventArgs e)
+        {
+            NumChipsSlider.Value = (int)Math.Round(NumChipsSlider.Value / 100d, 0) * 100;
+            NumChipsLabel.Text = $"Amount Per Person : {NumChipsSlider.Value}";
         }
         #endregion
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TexasHoldEmPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
