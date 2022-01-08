@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.MainPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new Shared_Poker_Repo.TableNodePanel();
             this.MainTitle = new System.Windows.Forms.Label();
             this.MainPictureBox = new System.Windows.Forms.PictureBox();
             this.TableTopButton = new System.Windows.Forms.Button();
             this.TexasHoldEmButton = new System.Windows.Forms.Button();
             this.BlackJackButton = new System.Windows.Forms.Button();
             this.FiveCardDrawButton = new System.Windows.Forms.Button();
-            this.TexasHoldEmPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TexasHoldEmPanel = new Shared_Poker_Repo.TableNodePanel();
             this.NumGamesLabel = new System.Windows.Forms.Label();
             this.NumGamesSlider = new System.Windows.Forms.TrackBar();
             this.TexasHoldEmTitle = new System.Windows.Forms.Label();
@@ -66,8 +66,10 @@
             this.MainPanel.Controls.Add(this.BlackJackButton, 0, 2);
             this.MainPanel.Controls.Add(this.FiveCardDrawButton, 0, 1);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.IsRoot = true;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
+            this.MainPanel.ParentNode = this.MainPanel;
             this.MainPanel.RowCount = 4;
             this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.MainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -170,8 +172,10 @@
             this.TexasHoldEmPanel.Controls.Add(this.NumPlayersLabel, 0, 2);
             this.TexasHoldEmPanel.Controls.Add(this.NumPlayersSlider, 0, 3);
             this.TexasHoldEmPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TexasHoldEmPanel.IsRoot = false;
             this.TexasHoldEmPanel.Location = new System.Drawing.Point(0, 0);
             this.TexasHoldEmPanel.Name = "TexasHoldEmPanel";
+            this.TexasHoldEmPanel.ParentNode = this.MainPanel;
             this.TexasHoldEmPanel.RowCount = 8;
             this.TexasHoldEmPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.TexasHoldEmPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -286,14 +290,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel MainPanel;
+        private TableNodePanel MainPanel;
         private System.Windows.Forms.Label MainTitle;
         private System.Windows.Forms.PictureBox MainPictureBox;
         private System.Windows.Forms.Button TableTopButton;
         private System.Windows.Forms.Button TexasHoldEmButton;
         private System.Windows.Forms.Button BlackJackButton;
         private System.Windows.Forms.Button FiveCardDrawButton;
-        private System.Windows.Forms.TableLayoutPanel TexasHoldEmPanel;
+        private TableNodePanel TexasHoldEmPanel;
         private System.Windows.Forms.Label TexasHoldEmTitle;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Label NumGamesLabel;

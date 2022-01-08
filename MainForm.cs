@@ -23,7 +23,7 @@ namespace Shared_Poker_Repo
 
     public partial class MainForm : Form
     {
-        List<Panel> listPanel = new List<Panel>();
+        //NOTE:
         public MainForm()
         {
             InitializeComponent();
@@ -33,20 +33,19 @@ namespace Shared_Poker_Repo
         //DO NOT change the order that panels are added, will make the PokerPanel buttons useless
         private void MainForm_Load(object sender, EventArgs e)
         {
-            listPanel.Add(MainPanel);
-            listPanel.Add(TexasHoldEmPanel);
+
         }
 
-        //universally used method to move back
+        //Universally used method to move back
         private void ShiftBack(object sender, EventArgs e)
         {
-            listPanel[0].BringToFront();
+            ((TableNodePanel)((Button)sender).Parent).ParentNode.BringToFront();
         }
         //Handles the switching of panels done on PokerPanel
         #region PokerPanel Button EventHandlers
         private void TexasHoldEmButton_Click(object sender, EventArgs e)
         {
-            listPanel[1].BringToFront();
+            TexasHoldEmPanel.BringToFront();
         }
 
         private void FiveCardDrawButton_Click(object sender, EventArgs e)
