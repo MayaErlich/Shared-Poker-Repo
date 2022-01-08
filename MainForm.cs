@@ -41,14 +41,12 @@ namespace Shared_Poker_Repo
         private void ShiftBack(object sender, EventArgs e)
         {
             listPanel[0].BringToFront();
-            this.Text = ((Button)sender).Parent.ToString();
         }
         //Handles the switching of panels done on PokerPanel
         #region PokerPanel Button EventHandlers
         private void TexasHoldEmButton_Click(object sender, EventArgs e)
         {
             listPanel[1].BringToFront();
-            this.Text = ((Button)sender).Parent.ToString();
         }
 
         private void FiveCardDrawButton_Click(object sender, EventArgs e)
