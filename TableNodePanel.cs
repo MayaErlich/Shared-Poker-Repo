@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,13 @@ namespace Shared_Poker_Repo
     {
         // Used to show that this is a root
         // Determines what is returned by ParentNode
+        [Category("Node Attributes")]
         public bool IsRoot { get; set; }
         // The "parent" of this panel. Used when there is switching between multiple pages
         // The parent is the panel used to go to this 
         // If no parent, returns itself
         private TableNodePanel _parentNode;
+        [Category("Node Attributes")]
         public TableNodePanel ParentNode {
             get 
             {

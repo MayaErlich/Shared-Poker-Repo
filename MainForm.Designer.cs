@@ -94,6 +94,7 @@
             // MainPictureBox
             // 
             this.MainPanel.SetColumnSpan(this.MainPictureBox, 2);
+            this.MainPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("MainPictureBox.Image")));
             this.MainPictureBox.Location = new System.Drawing.Point(843, 173);
             this.MainPictureBox.Name = "MainPictureBox";
@@ -123,7 +124,7 @@
             this.TexasHoldEmButton.Location = new System.Drawing.Point(3, 173);
             this.TexasHoldEmButton.Name = "TexasHoldEmButton";
             this.TexasHoldEmButton.Size = new System.Drawing.Size(414, 164);
-            this.TexasHoldEmButton.TabIndex = 4;
+            this.TexasHoldEmButton.TabIndex = 2;
             this.TexasHoldEmButton.Text = "Texas Hold\'Em";
             this.TexasHoldEmButton.UseVisualStyleBackColor = true;
             this.TexasHoldEmButton.Click += new System.EventHandler(this.TexasHoldEmButton_Click);
@@ -136,7 +137,7 @@
             this.BlackJackButton.Location = new System.Drawing.Point(3, 343);
             this.BlackJackButton.Name = "BlackJackButton";
             this.BlackJackButton.Size = new System.Drawing.Size(414, 164);
-            this.BlackJackButton.TabIndex = 3;
+            this.BlackJackButton.TabIndex = 4;
             this.BlackJackButton.Text = "BlackJack";
             this.BlackJackButton.UseVisualStyleBackColor = true;
             // 
@@ -148,7 +149,7 @@
             this.FiveCardDrawButton.Location = new System.Drawing.Point(423, 173);
             this.FiveCardDrawButton.Name = "FiveCardDrawButton";
             this.FiveCardDrawButton.Size = new System.Drawing.Size(414, 164);
-            this.FiveCardDrawButton.TabIndex = 2;
+            this.FiveCardDrawButton.TabIndex = 3;
             this.FiveCardDrawButton.Text = "5 Card Draw";
             this.FiveCardDrawButton.UseVisualStyleBackColor = true;
             // 
